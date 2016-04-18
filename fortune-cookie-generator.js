@@ -56,7 +56,7 @@ var fortunesList = [
     "You learn from your mistakes... You will learn a lot today.",
     "If you have something good in your life, don't let it go!",
     "What ever you're goal is in life, embrace it visualize it, and for it will be yours.",
-    "Your shoes will make you happy today."/*,
+    "Your shoes will make you happy today.",
     "You cannot love life until you live the life you love.",
     "Be on the lookout for coming events; They cast their shadows beforehand.",
     "Land is always on the mind of a flying bird.",
@@ -102,5 +102,5 @@ var fortunesList = [
     "The man on the top of the mountain did not fall there.",
     "You will conquer obstacles to achieve success.",
     "Joys are often the shadows, cast by sorrows.",
-    "Fortune favors the brave."*/
+    "Fortune favors the brave."
 ]
