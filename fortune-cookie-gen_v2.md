@@ -5,21 +5,17 @@
 //////////////////////////////////////////
 var generateFortuneCookie = function() {
 
-  var index = Math.floor(Math.random() * fortunesList.length);
+
+  var index = fortunesList[Math.floor(Math.random() * fortunesList.length)];
   var item = fortunesList[index];
-  document.getElementById("fortune-cookie-text").innerHTML = item;
-  //console.log(index);
-  var x = document.createElement("LI");
-  var t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = item);
-  x.appendChild(t);
-  if (fortunesList === undefined) {x = "";}
-  document.getElementById("previous-fortunes-container").appendChild(x);
-  //console.log(index);
   fortunesList.splice(index, 1);
-  if (index < 1) {t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = "You're outta fortunes. Refresh the page to go again");}
-  //console.log(index);
-  console.log(fortunesList);
-  //console.log(index);
+  document.getElementById("fortune-cookie-text").innerHTML = index;
+
+  var x = document.createElement("LI");
+  var t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = index);
+  x.appendChild(t);
+  document.getElementById("previous-fortunes-container").appendChild(x);
+return item;
 }
 
     // This is where your code for the Fortune Cookie generator goes.
@@ -56,7 +52,7 @@ var fortunesList = [
     "You learn from your mistakes... You will learn a lot today.",
     "If you have something good in your life, don't let it go!",
     "What ever you're goal is in life, embrace it visualize it, and for it will be yours.",
-    "Your shoes will make you happy today."/*,
+    "Your shoes will make you happy today.",
     "You cannot love life until you live the life you love.",
     "Be on the lookout for coming events; They cast their shadows beforehand.",
     "Land is always on the mind of a flying bird.",
@@ -102,5 +98,5 @@ var fortunesList = [
     "The man on the top of the mountain did not fall there.",
     "You will conquer obstacles to achieve success.",
     "Joys are often the shadows, cast by sorrows.",
-    "Fortune favors the brave."*/
+    "Fortune favors the brave."
 ]

@@ -5,21 +5,18 @@
 //////////////////////////////////////////
 var generateFortuneCookie = function() {
 
-  var index = Math.floor(Math.random() * fortunesList.length);
-  var item = fortunesList[index];
-  document.getElementById("fortune-cookie-text").innerHTML = item;
-  //console.log(index);
+  var index = fortunesList[Math.floor(Math.random() * fortunesList.length)];
+  document.getElementById("fortune-cookie-text").innerHTML = index;
+  console.log(index) + " 1";
   var x = document.createElement("LI");
-  var t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = item);
+  var t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = index);
   x.appendChild(t);
-  if (fortunesList === undefined) {x = "";}
   document.getElementById("previous-fortunes-container").appendChild(x);
-  //console.log(index);
+  console.log(index) + " 2";
   fortunesList.splice(index, 1);
-  if (index < 1) {t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = "You're outta fortunes. Refresh the page to go again");}
-  //console.log(index);
+  console.log(index) + " 3";
   console.log(fortunesList);
-  //console.log(index);
+  console.log(index) + " 4";
 }
 
     // This is where your code for the Fortune Cookie generator goes.
