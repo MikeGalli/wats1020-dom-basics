@@ -4,18 +4,19 @@
 //
 //////////////////////////////////////////
 var generateFortuneCookie = function() {
-
+                  //index will return a number, the actual index of the fortune to be used.
   var index = Math.floor(Math.random() * fortunesList.length);
-  var item = fortunesList[index];
+  var item = fortunesList[index];     // item is the text that exists at that index number.
   document.getElementById("fortune-cookie-text").innerHTML = item;
   //console.log(index);
-  var x = document.createElement("LI");
+  var x = document.createElement("LI");   //Create a list of fortunes. Get the text that was printed in, "fortune-cookie-text".
   var t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = item);
-  x.appendChild(t);
-  if (fortunesList === undefined) {x = "";}
-  document.getElementById("previous-fortunes-container").appendChild(x);
+  x.appendChild(t);         // Append the text in t, to the list.
+  //if (fortunesList === undefined) {x = "";}
+  document.getElementById("previous-fortunes-container").appendChild(x);//Put the list (and keep appending it) in, "previous-fortunes-container"
   //console.log(index);
-  fortunesList.splice(index, 1);
+  fortunesList.splice(index, 1);      //Remove the item that was printed from the list, "fortunesList"...
+                      // This makes the list get smaller & prevents repeats. When all the fortunes have been used, Print a message on screen.
   if (index < 1) {t = document.createTextNode(document.getElementById("fortune-cookie-text").innerHTML = "You're outta fortunes. Refresh the page to go again");}
   //console.log(index);
   console.log(fortunesList);
